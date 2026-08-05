@@ -94,7 +94,17 @@
                 </div>
             </div>
             
-            <div id="statusAlert" class="mt-5 hidden p-4 rounded-lg flex items-start gap-3 transition-all duration-300 transform translate-y-2 opacity-0 shadow-sm">
+            <div id="statusAlert" class="mt-5 hidden p-4 rounded-lg flex items-start gap-3 transition-all duration-300 transform translate-y-2 opacity-0 shadow-sm border">
+                <div id="statusIcon" class="flex-shrink-0"></div>
+                <div>
+                    <h3 id="statusTitle" class="text-sm font-bold"></h3>
+                    <p id="statusMessage" class="text-sm mt-1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
         function showStatus(type, title, message) {
             const alertBox = document.getElementById('statusAlert');
             const iconBox = document.getElementById('statusIcon');
